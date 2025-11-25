@@ -195,9 +195,9 @@ SEXP R_ilscount(SEXP x, SEXP R_tid, SEXP R_sid, SEXP R_eid, SEXP R_mingap, SEXP 
 		    ii = it + i;
 		    break;
 		}			    // copy
-		memcpy(ii, it + i, sizeof(int) * ni);
+		R_chk_memcpy(ii, it + i, sizeof(int) * ni);
 		if (maxwin)
-		    memset(di, 0, sizeof(int) * ni);
+		    R_chk_memset(di, 0, sizeof(int) * ni);
 	    }
 
 	    if (!m) {			    // temporal

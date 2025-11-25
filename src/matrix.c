@@ -25,7 +25,7 @@ SEXP R_rowSums_sgCMatrix(SEXP x) {
     PROTECT(ix = duplicate(getAttrib(x, install("i"))));
 
     PROTECT(r = allocVector(INTSXP, n));
-    memset(INTEGER(r), 0, sizeof(int) * n);
+    R_chk_memset(INTEGER(r), 0, sizeof(int) * n);
 
     f = 0;
     for (i = 1; i < LENGTH(px); i++) {
@@ -77,7 +77,7 @@ SEXP R_rowSubset_sgCMatrix(SEXP x, SEXP s) {
     n = INTEGER(getAttrib(x, install("Dim")))[0];
 
     o = INTEGER(PROTECT(allocVector(INTSXP, n)));
-    memset(o, 0, sizeof(int) * n);
+    R_chk_memset(o, 0, sizeof(int) * n);
 
     l = 1;
     for (i = 0; i < LENGTH(s); i++) {
@@ -328,7 +328,7 @@ SEXP R_firstOrder_sgCMatrix(SEXP x) {
     nr = INTEGER(getAttrib(x, install("Dim")))[0]; 
 
     PROTECT(r = allocMatrix(INTSXP, nr, nr));
-    memset(INTEGER(r), 0, sizeof(int) * nr * nr);
+    R_chk_memset(INTEGER(r), 0, sizeof(int) * nr * nr);
 
     f = 0;
     for (i = 1; i < LENGTH(px); i++) {

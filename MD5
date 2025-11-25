@@ -1,5 +1,5 @@
-1a4631811a381314d4da785f8796741c *CHANGELOG
-871ce5c6c41f63b3b6270d72c0e7c4b9 *DESCRIPTION
+41e7dfad1538e8ec7fe3e3dd72d9b2d7 *CHANGELOG
+3a3ec4faf94a5878c37b143d38623ac0 *DESCRIPTION
 9b09fe4a6ad430540113bbdc3247f5f1 *INSTALL
 863d5da9a4099f98e4ace9f2add4d51b *NAMESPACE
 c2752f2b126ff9acba8a0b7c23cf9652 *R/01matrix.R
@@ -79,12 +79,12 @@ ad884cdc1fd3eae29fe39496dee2ee09 *src/cSPADE/partition.cc
 a0724dcf9f1f69ec2594119688bdfe99 *src/cSPADE/spade.h
 b2e2d9071887047e47b69c4d953b9d35 *src/cSPADE/win.mk
 b895ee8f924efca583b0e66fc32c2100 *src/dll.c
-22c697b4396bfb277a5ff57a2061c329 *src/idlists.c
+473a6cdf29f0cd7c5545a2372cecb8d4 *src/idlists.c
 a1463016703018e71671b99e5c747c53 *src/makebin.c
-6232c1751471fc0ba621cce3f8e5beaa *src/matrix.c
-e178d15c388d37bc00fe99c3460b5da9 *src/ported.c
-5b6cb08d17fa0bc2ae5bdd830c029668 *src/ptree.c
-03c6b2e4ffbda7f11e26b33432496cb8 *src/similarity.c
+b0640a117d5c16dc26270e9ac571f8aa *src/matrix.c
+3ae16ba4fa0de6724df5d382efa6b02d *src/ported.c
+a1a71333d6a3ac9fc3e445a1e829a830 *src/ptree.c
+a6d3effaac988a6505cae2ec70a0d9bc *src/similarity.c
 32935964526a4494f601ac5296b28409 *tests/Rgui.R
 c791269a74df3f4881b7174266efaf64 *tests/arules.R
 7ef8032b6df8ce5f3446ae6865722ecd *tests/arules.Rout.save

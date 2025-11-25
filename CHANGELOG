@@ -1,5 +1,9 @@
 
 NEWS/ChangeLog for arulesSequences
+0.2-32 2025-11-25
+
+    o use R wrappers R_chk_memset and R_chk_memcpy.
+
 0.2-31 2024-08-21
 
     o emulate NonNullStringMatch in arrayIndex.c.

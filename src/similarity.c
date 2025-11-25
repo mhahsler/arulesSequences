@@ -183,13 +183,13 @@ SEXP R_similarity_sgCMatrix(SEXP x, SEXP y, SEXP R_e, SEXP R_method) {
 
 	    PROTECT(t = ir);
 	    setAttrib(r, install("i"), PROTECT(ir = allocVector(INTSXP, LENGTH(ir) * 2)));
-	    memcpy(INTEGER(ir), INTEGER(t), sizeof(int) * n);
+	    R_chk_memcpy(INTEGER(ir), INTEGER(t), sizeof(int) * n);
 
 	    UNPROTECT(2);
 
 	    PROTECT(t = xr);
 	    setAttrib(r, install("x"), PROTECT(xr = allocVector(REALSXP, LENGTH(ir))));
-	    memcpy(REAL(xr), REAL(t), sizeof(double) * n);
+	    R_chk_memcpy(REAL(xr), REAL(t), sizeof(double) * n);
 
 	    UNPROTECT(2);
 	}
@@ -251,13 +251,13 @@ SEXP R_similarity_sgCMatrix(SEXP x, SEXP y, SEXP R_e, SEXP R_method) {
     if (n < LENGTH(ir)) {
 	PROTECT(ix = ir);
 	setAttrib(r, install("i"), PROTECT(ir = allocVector(INTSXP, n)));
-	memcpy(INTEGER(ir), INTEGER(ix), sizeof(int) * n);
+	R_chk_memcpy(INTEGER(ir), INTEGER(ix), sizeof(int) * n);
 
 	UNPROTECT(2);
 
 	PROTECT(ix = xr);
 	setAttrib(r, install("x"), PROTECT(xr = allocVector(REALSXP, n)));
-	memcpy(REAL(xr), REAL(ix), sizeof(double) * n);
+	R_chk_memcpy(REAL(xr), REAL(ix), sizeof(double) * n);
 
 	UNPROTECT(2);
     }
@@ -307,7 +307,7 @@ SEXP R_as_dist_dsCMatrix(SEXP x) {
     n = (LENGTH(px)-1) * (LENGTH(px)-2) / 2;
 
     r = PROTECT(allocVector(REALSXP, n));
-    memset(REAL(r), 0, sizeof(double) * n);
+    R_chk_memset(REAL(r), 0, sizeof(double) * n);
 
     f = n = 0;
     for (i = 1; i < LENGTH(px); i++) {

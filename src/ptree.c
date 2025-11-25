@@ -946,7 +946,7 @@ SEXP R_pnssuperset(SEXP R_x, SEXP R_y, SEXP R_e, SEXP R_p, SEXP R_v) {
 
 		SET_VECTOR_ELT(r, i-1, PROTECT(t = allocVector(INTSXP, n)));
 		UNPROTECT(1);
-		memcpy(INTEGER(t), cb, sizeof(int) * n);
+		R_chk_memcpy(INTEGER(t), cb, sizeof(int) * n);
 	    }
 	    continue;
 	}
@@ -984,7 +984,7 @@ SEXP R_pnssuperset(SEXP R_x, SEXP R_y, SEXP R_e, SEXP R_p, SEXP R_v) {
 
 	    SET_VECTOR_ELT(r, i-1, PROTECT(t = allocVector(INTSXP, cn)));
 	    UNPROTECT(1);
-	    memcpy(INTEGER(t), cb, sizeof(int) * cn);
+	    R_chk_memcpy(INTEGER(t), cb, sizeof(int) * cn);
 	    R_isort(INTEGER(t), cn);
 	}
 	f = l;
